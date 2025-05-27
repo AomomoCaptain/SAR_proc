@@ -49,8 +49,8 @@ case $var1 in
         cd table
         [ -e "S1.cfg" ] && rm S1.cfg 
         cp $S1_TS_PROC_HOME/S1.cfg ./
-        [ -e "READ.ME" ] && rm READ.ME
-        cp $S1_TS_PROC_HOME/READ.ME ./
+        [ -e "READ.ME" ] && rm README.md
+        cp $S1_TS_PROC_HOME/README.md ./
         echo " "
         echo "  The configure file has gotten ready. "
         echo " "
@@ -60,8 +60,8 @@ case $var1 in
         cd table
         [ -e "S1.cfg" ] && rm S1.cfg 
         cp $S1_TS_PROC_HOME/S1.cfg ./
-        [ -e "READ.ME" ] && rm READ.ME
-        cp $S1_TS_PROC_HOME/READ.ME ./
+        [ -e "READ.ME" ] && rm README.md
+        cp $S1_TS_PROC_HOME/README.md ./
         echo " "
         echo "  The configure file has gotten ready. "
         echo " "
