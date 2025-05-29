@@ -26,7 +26,7 @@ if [ "$1" == "--help" ] || [ "$1" == "-help" ] || [ "$1" == "-h" ] || [ "$#" -lt
      <BEGS>:               (input) 
      <ENDS>:               (input) 
 
-  data ml coreg subset/diff(end here for Stamps) unwarp (end here for LiCs)
+  data ml coreg subset/diff(end here for Stamps) unwrap (end here for LiCs)
   
     
             CURRENT DIR: $PWD

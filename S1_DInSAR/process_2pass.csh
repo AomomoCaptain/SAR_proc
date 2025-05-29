@@ -952,26 +952,26 @@ if ($BEGS == "DIFF") then
       echo $EMP
    endif
 
-   #geocode smc
-   if(-e ${mas_mcc) then
-      #geocode nce image
-      echo "geocode_back ${mas_slv}.smcc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.smcc_utm $utmw 0 0 0"
-      geocode_back ${mas_slv}.smcc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.smcc_utm $utmw 0 0 0 >> $PRJDIR/$intLog
-      echo $EMP
-
-      #echo "geocode_back ${mas_slv}.cc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.cc_utm $utmw 0 0 0"
-      # geocode_back ${mas_slv}.cc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.cc_utm $utmw 0 0 0 >> $PRJDIR/$intLog
-      #echo $EMP
-
-      #raster geocoded coherence image
-      #echo "rascc ${mas_slv}.smcc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks"
-      # rascc ${mas_slv}.smcc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks >> $PRJDIR/$intLog
-      #echo $EMP
-
-      #echo "rascc ${mas_slv}.cc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks"
-      #rascc ${mas_slv}.cc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks >> $PRJDIR/$intLog
-      #echo $EMP
-   endif
+#2   #geocode smc
+#2   if(-e ${mas_mcc}) then
+#2      #geocode nce image
+#2      echo "geocode_back ${mas_slv}.smcc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.smcc_utm $utmw 0 0 0"
+#2      geocode_back ${mas_slv}.smcc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.smcc_utm $utmw 0 0 0 >> $PRJDIR/$intLog
+#2      echo $EMP
+#2
+#2      #echo "geocode_back ${mas_slv}.cc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.cc_utm $utmw 0 0 0"
+#2      # geocode_back ${mas_slv}.cc $np $SIMDIR/${mas_slv}.utm_to_rdc_fine ${mas_slv}.cc_utm $utmw 0 0 0 >> $PRJDIR/$intLog
+#2      #echo $EMP
+#2
+#2      #raster geocoded coherence image
+#2      #echo "rascc ${mas_slv}.smcc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks"
+#2      # rascc ${mas_slv}.smcc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks >> $PRJDIR/$intLog
+#2      #echo $EMP
+#2
+#2      #echo "rascc ${mas_slv}.cc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks"
+#2      #rascc ${mas_slv}.cc_utm ${mas_slv}.pwr1_utm $utmw 1 1 0 $rasrlks $rasazlks >> $PRJDIR/$intLog
+#2      #echo $EMP
+#2   endif
 
    #geocode filtered interferogram
    if(-e ${mas_slv}.tflt_sm) then

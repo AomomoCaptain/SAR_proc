@@ -95,9 +95,23 @@ fi
 
 #+++++ now mosaic the reference image +++++#
 
-#SLC_mosaic_S1_TOPS SLC_tab $reference.msc.slc $reference.msc.slc.par $ran_look $azi_look 1
-# SLC_mosaic_S1_TOPS has been renamed to SLC_mosaic_ScanSAR. Copyright 2022, Gamma Remote Sensing
-SLC_mosaic_ScanSAR SLC_tab $reference.msc.slc $reference.msc.slc.par $ran_look $azi_look 1
+# SLC_mosaic_S1_TOPS SLC_tab $reference.msc.slc $reference.msc.slc.par $ran_look $azi_look 1
+#: SLC_mosaic_S1_TOPS has been renamed to SLC_mosaic_ScanSAR. Copyright 2022, Gamma Remote Sensing
+# SLC_mosaic_ScanSAR SLC_tab $reference.msc.slc $reference.msc.slc.par $ran_look $azi_look 1
+
+echo "Trying SLC_mosaic_S1_TOPS..."
+if SLC_mosaic_S1_TOPS SLC_tab $reference.msc.slc $reference.msc.slc.par $ran_look $azi_look 1; then
+    echo "SLC_mosaic_S1_TOPS executed successfully."
+else
+    echo "SLC_mosaic_S1_TOPS failed. Trying SLC_mosaic_ScanSAR instead..."
+    if SLC_mosaic_ScanSAR SLC_tab $reference.msc.slc $reference.msc.slc.par $ran_look $azi_look 1; then
+        echo "SLC_mosaic_ScanSAR executed successfully."
+    else
+        echo "Both SLC_mosaic_S1_TOPS and SLC_mosaic_ScanSAR failed."
+        exit 1
+    fi
+fi
+
 range_samples_msc=$(cat $reference.msc.slc.par | awk '/range_samples:/ {print $2}')
 azimuth_lines_msc=$(cat $reference.msc.slc.par | awk '/azimuth_lines:/ {print $2}')
 #rasSLC $reference.msc.slc $range_samples_msc 1 $azimuth_lines_msc $ran_look $azi_look - - - - - $reference.$ran_look\_$azi_look.msc.slc.bmp
